@@ -1,9 +1,9 @@
 class Solution {
     public boolean checkIfExist(int[] arr) {
       for(int i=0;i<arr.length;i++){
-        int target=arr[i];
+        int target=arr[j];
          for(int j=0;j<arr.length;j++ ){
-            if(2*arr[j]==target && i!=j){
+            if(2*arr[i]==target && i!=j){
                 return true;
             }
          }
