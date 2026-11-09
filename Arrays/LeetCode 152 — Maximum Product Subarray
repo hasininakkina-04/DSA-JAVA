@@ -1,0 +1,15 @@
+class Solution {
+    public int maxProduct(int[] nums) {
+        int cmax=nums[0];
+        int cmin=nums[0];
+        int max=nums[0];
+        for(int i=1;i<nums.length;i++){
+            int nmax=Math.max(nums[i],Math.max(nums[i]*cmax,nums[i]*cmin));
+            int nmin=Math.min(nums[i],Math.min(nums[i]*cmax,nums[i]*cmin));
+            max=Math.max(nmax,max);
+            cmax=nmax;
+            cmin=nmin;
+        }
+        return max;
+    }
+}
